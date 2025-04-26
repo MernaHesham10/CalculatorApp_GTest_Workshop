@@ -1,7 +1,6 @@
 #include "pch.h"
 #include <gtest/gtest.h>
-#include "E:\Workshops\GTest\Calculator\CalculatorTestSuite\Calculator.h"
-#include <tuple>
+#include "../CalculatorTestSuite/Calculator.h"
 
 TEST(CalculatorDisabledTest, DISABLED_OldTest) {
     // This test won't run unless explicitly enabled

@@ -1,6 +1,6 @@
 #include "pch.h"
 #include <gtest/gtest.h>
-#include "E:\Workshops\GTest\Calculator\CalculatorTestSuite\Calculator.h"
+#include "../CalculatorTestSuite/Calculator.h"
 
 struct TestInput {
     int a, b;
