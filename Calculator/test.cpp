@@ -4,11 +4,19 @@
 #include <tuple>
 
 // 1. Basic Add Tests
-//TEST(CalculatorTests, AddTest) {
-//    Calculator calc;
-//    EXPECT_EQ(5, calc.Add(2, 3));  // Non-fatal assertion
-//    ASSERT_EQ(10, calc.Add(5, 5)); // Fatal assertion
-//}
+TEST(CalculatorTests, AddTest) {
+    //Arrange
+    Calculator calc; 
+
+    //Act
+    int r1 = calc.Add(2, 3);
+    int r2 = calc.Add(5, 5);
+
+    //Assert
+    EXPECT_EQ(5, r1);  // Non-fatal assertion
+    ASSERT_EQ(10, r2); // Fatal assertion
+}
+
 //
 //TEST(CalculatorTests, DivideTest) {
 //    Calculator calc;

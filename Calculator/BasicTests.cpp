@@ -1,22 +1,24 @@
 #include "pch.h"
 #include <gtest/gtest.h>
-#include "E:\Workshops\GTest\Calculator\CalculatorTestSuite\Calculator.h"
+#include "../CalculatorTestSuite/Calculator.h"
 
-class CalculatorTest : public ::testing::Test {
-protected:
+TEST(CalculatorTests, Add_PositiveNumbers_ReturnsCorrectSum) {
     Calculator calc;
-};
-
-TEST_F(CalculatorTest, BasicTests_AddTest_TC1) {
-    EXPECT_EQ(calc.Add(2, 3), 5);    // Non-fatal assertion
-    ASSERT_EQ(calc.Add(-1, 1), 0);   // Fatal assertion
+    EXPECT_EQ(calc.Add(2, 3), 5);
 }
 
-TEST_F(CalculatorTest, BasicTests_AddTests_TC2) {
-    EXPECT_EQ(5, calc.Add(2, 3));  // EXPECT_EQ for non-fatal assertions
-    ASSERT_EQ(10, calc.Add(5, 5)); // ASSERT_EQ for fatal assertions
+TEST(CalculatorTests, Add_NegativeAndPositive_ReturnsCorrectSum) {
+    Calculator calc;
+    ASSERT_EQ(calc.Add(-1, 1), 0);
 }
 
-TEST_F(CalculatorTest, BasicTests_DivideTests_TC3) {
-    EXPECT_DOUBLE_EQ(2.5, calc.Divide(5, 2)); // Floating-point comparison
+TEST(CalculatorTests, Add_AnotherPositivePair_ReturnsCorrectSum) {
+    Calculator calc;
+    EXPECT_EQ(5, calc.Add(2, 3));
+    ASSERT_EQ(10, calc.Add(5, 5));
+}
+
+TEST(CalculatorTests, Divide_NormalCase_ReturnsCorrectResult) {
+    Calculator calc;
+    EXPECT_DOUBLE_EQ(2.5, calc.Divide(5, 2));
 }
