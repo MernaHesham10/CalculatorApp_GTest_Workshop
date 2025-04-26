@@ -1,6 +1,7 @@
 #include "pch.h"
 #include <gtest/gtest.h>
-#include "../CalculatorTestSuite/Calculator.cpp"
+//#include "E:\Workshops\GTest\Calculator\CalculatorTestSuite\Calculator.cpp"
+#include "../CalculatorTestSuite/Calculator.h"
 #include <tuple>
 
 // 1. Basic Add Tests
